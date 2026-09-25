@@ -1,0 +1,53 @@
+/* ELUCENIA standalone integration. Source package metadata and rights: README.md. */
+(function(root){'use strict';
+function freeze(value){if(value&&typeof value==='object'){for(const item of Object.values(value))freeze(item);Object.freeze(value);}return value;}
+const TOOL=freeze({"id":"escala-de-lawton","title":"Escala de Lawton-Brody (AIVD)","fields":[["tel","Telefone","sel",{"opts":{"a":"Usa por iniciativa própria (procura e disca números)","b":"Disca alguns números conhecidos","c":"Atende, mas não disca","d":"Não usa o telefone"}}],["compras","Compras","sel",{"opts":{"a":"Faz todas as compras sozinho","b":"Faz sozinho só pequenas compras","c":"Precisa de acompanhante em qualquer compra","d":"Incapaz de fazer compras"}}],["comida","Preparo de refeições","sel",{"opts":{"a":"Planeja, prepara e serve refeições adequadas sozinho","b":"Prepara se receber os ingredientes","c":"Aquece e serve refeições prontas, mas sem dieta adequada","d":"Precisa que preparem e sirvam as refeições"}}],["casa","Tarefas domésticas","sel",{"opts":{"a":"Cuida da casa sozinho ou com ajuda ocasional em tarefas pesadas","b":"Faz tarefas leves (lavar louça, arrumar a cama)","c":"Faz tarefas leves, mas sem manter a limpeza adequada","d":"Precisa de ajuda em todas as tarefas","e":"Não participa de nenhuma tarefa doméstica"}}],["roupa","Lavar roupa","sel",{"opts":{"a":"Lava toda a roupa pessoal","b":"Lava pequenas peças","c":"Toda a roupa é lavada por outros"}}],["transp","Transporte","sel",{"opts":{"a":"Usa transporte público ou dirige sozinho","b":"Pega táxi ou aplicativo sozinho, mas não usa transporte público","c":"Usa transporte público quando acompanhado","d":"Só anda de táxi ou carro com ajuda de outra pessoa","e":"Não sai de casa"}}],["remedio","Medicações","sel",{"opts":{"a":"Toma os remédios na dose e hora certas sozinho","b":"Toma se alguém separar as doses antes","c":"Incapaz de tomar os remédios sozinho"}}],["dinheiro","Finanças","sel",{"opts":{"a":"Cuida das finanças sozinho","b":"Faz compras do dia a dia, mas precisa de ajuda com banco e grandes compras","c":"Incapaz de lidar com dinheiro"}}]],"config":null,"reviewStatus":"needs-review","clinicalValidation":"not-performed"});
+const window={};
+/* ELUCENIA arithmetic registry. No DOM access, storage, telemetry or network requests. */
+(function(root){
+  'use strict';
+  const CALC={fn:Object.create(null)};
+  const round=(n,d=1)=>Math.round(n*Math.pow(10,d))/Math.pow(10,d);
+  const yes=v=>v===true||v==='1'||v===1;
+  CALC.h={
+    r1:round,
+    br:(n,d=1)=>round(n,d).toLocaleString('pt-BR',{minimumFractionDigits:d,maximumFractionDigits:d}),
+    band:(n,bands)=>{for(const b of bands)if(n<b[0])return b[1];return bands[bands.length-1][1];},
+    sum:(values,weights)=>Object.entries(weights).reduce((n,[key,w])=>n+(yes(values[key])?w:0),0),yes
+  };
+  CALC.def=(id,fn)=>{if(CALC.fn[id])throw Error('Duplicate calculator '+id);CALC.fn[id]=fn;};
+  CALC.score=(cfg,values)=>{
+    let score=0;
+    for(const[name,type,weight]of cfg.fields){const v=values[name];if(type==='chk'){if(yes(v))score+=weight;}else if(type==='radio'||type==='sel'){const n=parseFloat(v);if(!Number.isNaN(n))score+=n;}}
+    score=round(score,2);let band=cfg.bands[0];for(const b of cfg.bands)if(score>=b[0])band=b;
+    return{main:[String(score).replace('.',','),cfg.unit||(Math.abs(score)===1?'ponto':'pontos')],label:cfg.label,level:band[1],verdict:band[2],note:band[3]||'',raw:{score}};
+  };
+  CALC.run=(id,values,cfg)=>{if(cfg&&cfg.bands)return CALC.score(cfg,values);if(!CALC.fn[id])return{error:'Calculadora indisponível.'};return CALC.fn[id](values);};
+  root.CALC=CALC;if(typeof module!=='undefined')module.exports=CALC;
+})(typeof window!=='undefined'?window:globalThis);
+
+(function(e){'use strict';
+
+e.def("escala-de-lawton",function(e){var a={tel:{a:1,b:1,c:1,d:0},compras:{a:1,b:0,c:0,d:0},comida:{a:1,b:0,c:0,d:0},casa:{a:1,b:1,c:1,d:1,e:0},roupa:{a:1,b:1,c:0},transp:{a:1,b:1,c:1,d:0,e:0},remedio:{a:1,b:0,c:0},dinheiro:{a:1,b:1,c:0}},i={tel:"telefone",compras:"compras",comida:"preparo de refeições",casa:"tarefas domésticas",roupa:"lavar roupa",transp:"transporte",remedio:"medicações",dinheiro:"finanças"},o=0,r=[];for(var s in a){var d=a[s][e[s]];if(null==d)return{error:"Responda todos os itens."};o+=d,d||r.push(i[s])}return{main:[String(o),"de 8"],label:"Lawton-Brody (AIVD)",level:8===o?"low":"mid",verdict:8===o?"Independente nas atividades instrumentais":"Dependência em "+r.length+(1===r.length?" atividade":" atividades")+": "+r.join(", "),raw:{score:o}}});
+})(window.CALC);
+function calculate(input){
+ if(!input||typeof input!=='object'||Array.isArray(input))return {error:'Informe um objeto com os campos da ferramenta.',code:'INVALID_INPUT'};
+ const values=Object.create(null);
+ for(const[name,,kind,o={}] of TOOL.fields){
+  const v=Object.hasOwn(input,name)?input[name]:undefined;
+  if(kind==='chk'){if(v!==undefined&&v!==null&&![true,false,1,0,'1','0'].includes(v))return {error:'Campo booleano inválido: '+name,field:name,code:'INVALID_INPUT'};values[name]=v===true||v===1||v==='1';continue;}
+  const empty=v==null||(typeof v==='string'&&!v.trim());
+  if(empty){if(!o.opt)return {error:'Campo obrigatório: '+name,field:name,code:'REQUIRED_FIELD'};values[name]=kind==='num'?null:'';continue;}
+  if(kind==='num'){
+   if(!['number','string'].includes(typeof v)||(typeof v==='string'&&!/^[+-]?(?:\d+(?:\.\d*)?|\.\d+)(?:[eE][+-]?\d+)?$/.test(v.trim()))||!Number.isFinite(Number(v)))return {error:'Número inválido: '+name,field:name,code:'INVALID_INPUT'};
+   const n=Number(v);if((Number.isFinite(o.min)&&n<o.min)||(Number.isFinite(o.max)&&n>o.max))return {error:'Valor fora do intervalo: '+name,field:name,code:'OUT_OF_RANGE'};
+   values[name]=n;
+  }else{if(!Object.hasOwn(o.opts||{},String(v)))return {error:'Opção inválida: '+name,field:name,code:'INVALID_OPTION'};values[name]=String(v);}
+ }
+ try{const r=window.CALC.run(TOOL.id,values,TOOL.config);if(r.error)return {error:String(r.error).replace(/<[^>]*>/g,''),code:'FORMULA_DOMAIN'};
+  if(!Array.isArray(r.main)||r.main.some(v=>typeof v==='number'&&!Number.isFinite(v))||/\b(?:NaN|Infinity)\b/.test(String(r.main[0])))return {error:'Resultado não finito ou indisponível.',code:'INVALID_RESULT'};
+  return {id:TOOL.id,main:r.main,label:r.label||TOOL.title,raw:r.raw||{},clinicalValidation:'not-performed'};
+ }catch{return {error:'Confira os valores e o domínio da fórmula.',code:'FORMULA_DOMAIN'};}
+}
+const api=Object.freeze({metadata:TOOL,calculate});if(typeof module!=='undefined'&&module.exports)module.exports=api;else root.EluceniaTool=api;
+})(typeof globalThis!=='undefined'?globalThis:this);

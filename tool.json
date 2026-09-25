@@ -1,0 +1,241 @@
+{
+  "tool": {
+    "id": "escala-de-lawton",
+    "title": "Escala de Lawton-Brody (AIVD)",
+    "short": "Atividades instrumentais de vida diária",
+    "desc": "Escala de Lawton-Brody: independência nas 8 atividades instrumentais de vida diária (telefone, compras, refeições, casa, roupa, transporte, remédios, finanças).",
+    "lead": "Avalia a capacidade de viver de forma independente na comunidade, pelas atividades instrumentais de vida diária (AIVD).",
+    "spec": [
+      "geriatria",
+      "medicina-fisica-e-reabilitacao",
+      "medicina-de-familia-e-comunidade",
+      "neurologia"
+    ],
+    "fields": [
+      [
+        "tel",
+        "Telefone",
+        "sel",
+        {
+          "opts": {
+            "a": "Usa por iniciativa própria (procura e disca números)",
+            "b": "Disca alguns números conhecidos",
+            "c": "Atende, mas não disca",
+            "d": "Não usa o telefone"
+          }
+        }
+      ],
+      [
+        "compras",
+        "Compras",
+        "sel",
+        {
+          "opts": {
+            "a": "Faz todas as compras sozinho",
+            "b": "Faz sozinho só pequenas compras",
+            "c": "Precisa de acompanhante em qualquer compra",
+            "d": "Incapaz de fazer compras"
+          }
+        }
+      ],
+      [
+        "comida",
+        "Preparo de refeições",
+        "sel",
+        {
+          "opts": {
+            "a": "Planeja, prepara e serve refeições adequadas sozinho",
+            "b": "Prepara se receber os ingredientes",
+            "c": "Aquece e serve refeições prontas, mas sem dieta adequada",
+            "d": "Precisa que preparem e sirvam as refeições"
+          }
+        }
+      ],
+      [
+        "casa",
+        "Tarefas domésticas",
+        "sel",
+        {
+          "opts": {
+            "a": "Cuida da casa sozinho ou com ajuda ocasional em tarefas pesadas",
+            "b": "Faz tarefas leves (lavar louça, arrumar a cama)",
+            "c": "Faz tarefas leves, mas sem manter a limpeza adequada",
+            "d": "Precisa de ajuda em todas as tarefas",
+            "e": "Não participa de nenhuma tarefa doméstica"
+          }
+        }
+      ],
+      [
+        "roupa",
+        "Lavar roupa",
+        "sel",
+        {
+          "opts": {
+            "a": "Lava toda a roupa pessoal",
+            "b": "Lava pequenas peças",
+            "c": "Toda a roupa é lavada por outros"
+          }
+        }
+      ],
+      [
+        "transp",
+        "Transporte",
+        "sel",
+        {
+          "opts": {
+            "a": "Usa transporte público ou dirige sozinho",
+            "b": "Pega táxi ou aplicativo sozinho, mas não usa transporte público",
+            "c": "Usa transporte público quando acompanhado",
+            "d": "Só anda de táxi ou carro com ajuda de outra pessoa",
+            "e": "Não sai de casa"
+          }
+        }
+      ],
+      [
+        "remedio",
+        "Medicações",
+        "sel",
+        {
+          "opts": {
+            "a": "Toma os remédios na dose e hora certas sozinho",
+            "b": "Toma se alguém separar as doses antes",
+            "c": "Incapaz de tomar os remédios sozinho"
+          }
+        }
+      ],
+      [
+        "dinheiro",
+        "Finanças",
+        "sel",
+        {
+          "opts": {
+            "a": "Cuida das finanças sozinho",
+            "b": "Faz compras do dia a dia, mas precisa de ajuda com banco e grandes compras",
+            "c": "Incapaz de lidar com dinheiro"
+          }
+        }
+      ]
+    ],
+    "formula": "<p>Cada atividade recebe 1 ponto (independente) ou 0 (dependente), conforme o nível descrito:</p><ul><li>Telefone: 1 nos três primeiros níveis.</li><li>Compras e preparo de refeições: 1 só no primeiro nível.</li><li>Tarefas domésticas: 1 em todos os níveis, exceto \"não participa\".</li><li>Lavar roupa: 1 nos dois primeiros níveis.</li><li>Transporte: 1 nos três primeiros níveis.</li><li>Medicações: 1 só no primeiro nível.</li><li>Finanças: 1 nos dois primeiros níveis.</li></ul><p>Total de 0 (dependente) a 8 (independente).</p>",
+    "table": [
+      [
+        "Pontos",
+        "Interpretação"
+      ],
+      [
+        "8",
+        "Independente nas AIVD"
+      ],
+      [
+        "&lt; 8",
+        "Dependência nas atividades com 0 ponto: planejar apoio e investigar a causa"
+      ]
+    ],
+    "table_note": "A escala original não define pontos de corte: acompanhe a pontuação ao longo do tempo no mesmo paciente. No estudo de 1969, preparo de refeições, tarefas domésticas e lavar roupa não foram pontuados nos homens.",
+    "tips": [
+      "As AIVD dependem de cognição e são perdidas antes das atividades básicas: perda de AIVD sem causa física sugere comprometimento cognitivo e merece investigação.",
+      "Considere o papel social e o contexto: quem nunca cozinhou ou cuidou das finanças não deve ser pontuado como dependente sem essa ressalva.",
+      "O item \"medicações\" é o mais sensível para risco na polifarmácia: dependência pede organizador de comprimidos ou supervisão.",
+      "Na adaptação brasileira mais usada (Santos e Virtuoso), cada item vai de 1 a 3 pontos (7 a 21): não compare diretamente com o escore de 0 a 8."
+    ],
+    "sources": [
+      [
+        "Lawton MP, Brody EM. Assessment of older people: self-maintaining and instrumental activities of daily living. Gerontologist, 1969.",
+        "https://doi.org/10.1093/geront/9.3_Part_1.179"
+      ]
+    ],
+    "cases": [
+      [
+        "Independente em todas: 8",
+        {
+          "tel": "a",
+          "compras": "a",
+          "comida": "a",
+          "casa": "a",
+          "roupa": "a",
+          "transp": "a",
+          "remedio": "a",
+          "dinheiro": "a"
+        },
+        {
+          "raw": {
+            "score": 8
+          },
+          "level": "low",
+          "main": "8"
+        }
+      ],
+      [
+        "Disca números conhecidos, pequenas compras, remédios separados: 5",
+        {
+          "tel": "b",
+          "compras": "b",
+          "comida": "a",
+          "casa": "c",
+          "roupa": "b",
+          "transp": "c",
+          "remedio": "b",
+          "dinheiro": "c"
+        },
+        {
+          "raw": {
+            "score": 5
+          },
+          "level": "mid",
+          "verdict": "3 atividades"
+        }
+      ],
+      [
+        "Dependente na maioria: 2",
+        {
+          "tel": "b",
+          "compras": "c",
+          "comida": "d",
+          "casa": "e",
+          "roupa": "c",
+          "transp": "d",
+          "remedio": "b",
+          "dinheiro": "b"
+        },
+        {
+          "raw": {
+            "score": 2
+          },
+          "level": "mid"
+        }
+      ]
+    ],
+    "batch": "clinica",
+    "kind": "Calculadora",
+    "config": null,
+    "areaId": "clinica",
+    "clinicalReview": "pending",
+    "sourceReview": "pending",
+    "sourceFile": "app/content/ferramentas/clinica.php",
+    "arithmeticTest": {
+      "status": "passed",
+      "testedAt": "2026-09-25",
+      "total": 3,
+      "passed": 3,
+      "failures": []
+    },
+    "independentArithmeticTest": {
+      "status": "not-tested",
+      "testedAt": null,
+      "total": 0,
+      "passed": 0,
+      "cases": []
+    }
+  },
+  "review": {
+    "status": "needs-review",
+    "reason": "Revisão documental e clínica independente pendente.",
+    "clinicalValidation": "not-performed"
+  },
+  "sourceFile": {
+    "path": "app/content/ferramentas/clinica.php",
+    "sha256": "9dc60f9c51e1db27ff495c69b24d4422a87e42b8c9bc63551aac6a9bc704b2e0",
+    "bytes": 101245
+  },
+  "clinicalValidation": "not-performed"
+}

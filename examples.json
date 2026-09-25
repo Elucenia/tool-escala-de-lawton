@@ -1,0 +1,94 @@
+[
+  {
+    "label": "Independente em todas: 8",
+    "input": {
+      "tel": "a",
+      "compras": "a",
+      "comida": "a",
+      "casa": "a",
+      "roupa": "a",
+      "transp": "a",
+      "remedio": "a",
+      "dinheiro": "a"
+    },
+    "expected": {
+      "raw": {
+        "score": 8
+      },
+      "level": "low",
+      "main": "8"
+    },
+    "originalInput": {
+      "tel": "a",
+      "compras": "a",
+      "comida": "a",
+      "casa": "a",
+      "roupa": "a",
+      "transp": "a",
+      "remedio": "a",
+      "dinheiro": "a"
+    },
+    "expandedZeroOptions": []
+  },
+  {
+    "label": "Disca números conhecidos, pequenas compras, remédios separados: 5",
+    "input": {
+      "tel": "b",
+      "compras": "b",
+      "comida": "a",
+      "casa": "c",
+      "roupa": "b",
+      "transp": "c",
+      "remedio": "b",
+      "dinheiro": "c"
+    },
+    "expected": {
+      "raw": {
+        "score": 5
+      },
+      "level": "mid",
+      "verdict": "3 atividades"
+    },
+    "originalInput": {
+      "tel": "b",
+      "compras": "b",
+      "comida": "a",
+      "casa": "c",
+      "roupa": "b",
+      "transp": "c",
+      "remedio": "b",
+      "dinheiro": "c"
+    },
+    "expandedZeroOptions": []
+  },
+  {
+    "label": "Dependente na maioria: 2",
+    "input": {
+      "tel": "b",
+      "compras": "c",
+      "comida": "d",
+      "casa": "e",
+      "roupa": "c",
+      "transp": "d",
+      "remedio": "b",
+      "dinheiro": "b"
+    },
+    "expected": {
+      "raw": {
+        "score": 2
+      },
+      "level": "mid"
+    },
+    "originalInput": {
+      "tel": "b",
+      "compras": "c",
+      "comida": "d",
+      "casa": "e",
+      "roupa": "c",
+      "transp": "d",
+      "remedio": "b",
+      "dinheiro": "b"
+    },
+    "expandedZeroOptions": []
+  }
+]
