@@ -1,11 +1,11 @@
-/* tool-escala-de-lawton · Elucenia · https://github.com/Elucenia/tool-escala-de-lawton
-   Copyright (c) 2026 Elucenia · Felipe Guedes (fgxdev.com). Licensed under the Apache License 2.0: keep this notice and the NOTICE file, and mark your changes.
+/* tool-escala-de-lawton · ELUCENIA · https://github.com/Elucenia/tool-escala-de-lawton
+   Copyright (c) 2026 ELUCENIA · Felipe Guedes (fgxdev.com). Licensed under the Apache License 2.0: keep this notice and the NOTICE file, and mark your changes.
    Standalone integration. Package metadata and rights: README.md. */
 (function(root){'use strict';
 function freeze(value){if(value&&typeof value==='object'){for(const item of Object.values(value))freeze(item);Object.freeze(value);}return value;}
 const TOOL=freeze({"id":"escala-de-lawton","title":"Escala de Lawton-Brody (AIVD)","fields":[["tel","Telefone","sel",{"opts":{"a":"Usa por iniciativa própria (procura e disca números)","b":"Disca alguns números conhecidos","c":"Atende, mas não disca","d":"Não usa o telefone"}}],["compras","Compras","sel",{"opts":{"a":"Faz todas as compras sozinho","b":"Faz sozinho só pequenas compras","c":"Precisa de acompanhante em qualquer compra","d":"Incapaz de fazer compras"}}],["comida","Preparo de refeições","sel",{"opts":{"a":"Planeja, prepara e serve refeições adequadas sozinho","b":"Prepara se receber os ingredientes","c":"Aquece e serve refeições prontas, mas sem dieta adequada","d":"Precisa que preparem e sirvam as refeições"}}],["casa","Tarefas domésticas","sel",{"opts":{"a":"Cuida da casa sozinho ou com ajuda ocasional em tarefas pesadas","b":"Faz tarefas leves (lavar louça, arrumar a cama)","c":"Faz tarefas leves, mas sem manter a limpeza adequada","d":"Precisa de ajuda em todas as tarefas","e":"Não participa de nenhuma tarefa doméstica"}}],["roupa","Lavar roupa","sel",{"opts":{"a":"Lava toda a roupa pessoal","b":"Lava pequenas peças","c":"Toda a roupa é lavada por outros"}}],["transp","Transporte","sel",{"opts":{"a":"Usa transporte público ou dirige sozinho","b":"Pega táxi ou aplicativo sozinho, mas não usa transporte público","c":"Usa transporte público quando acompanhado","d":"Só anda de táxi ou carro com ajuda de outra pessoa","e":"Não sai de casa"}}],["remedio","Medicações","sel",{"opts":{"a":"Toma os remédios na dose e hora certas sozinho","b":"Toma se alguém separar as doses antes","c":"Incapaz de tomar os remédios sozinho"}}],["dinheiro","Finanças","sel",{"opts":{"a":"Cuida das finanças sozinho","b":"Faz compras do dia a dia, mas precisa de ajuda com banco e grandes compras","c":"Incapaz de lidar com dinheiro"}}]],"config":null,"reviewStatus":"needs-review","clinicalValidation":"not-performed"});
 const window={};
-/* Elucenia arithmetic registry. No DOM access, storage, telemetry or network requests. */
+/* ELUCENIA arithmetic registry. No DOM access, storage, telemetry or network requests. */
 (function(root){
   'use strict';
   const CALC={fn:Object.create(null)};
