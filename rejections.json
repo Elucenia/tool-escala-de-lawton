@@ -1,0 +1,462 @@
+[
+  {
+    "name": "Reject null input",
+    "input": null,
+    "expected": {
+      "code": "INVALID_INPUT",
+      "field": null
+    },
+    "scope": "Independently constructed schema/domain refusal; code observed from the pinned adapter, no clinical oracle"
+  },
+  {
+    "name": "Reject array input",
+    "input": [],
+    "expected": {
+      "code": "INVALID_INPUT",
+      "field": null
+    },
+    "scope": "Independently constructed schema/domain refusal; code observed from the pinned adapter, no clinical oracle"
+  },
+  {
+    "name": "Reject string input",
+    "input": "invalid",
+    "expected": {
+      "code": "INVALID_INPUT",
+      "field": null
+    },
+    "scope": "Independently constructed schema/domain refusal; code observed from the pinned adapter, no clinical oracle"
+  },
+  {
+    "name": "Reject numeric input",
+    "input": 1,
+    "expected": {
+      "code": "INVALID_INPUT",
+      "field": null
+    },
+    "scope": "Independently constructed schema/domain refusal; code observed from the pinned adapter, no clinical oracle"
+  },
+  {
+    "name": "Reject missing required field tel",
+    "input": {
+      "compras": "a",
+      "comida": "a",
+      "casa": "a",
+      "roupa": "a",
+      "transp": "a",
+      "remedio": "a",
+      "dinheiro": "a"
+    },
+    "expected": {
+      "code": "REQUIRED_FIELD",
+      "field": "tel"
+    },
+    "scope": "Independently constructed schema/domain refusal; code observed from the pinned adapter, no clinical oracle"
+  },
+  {
+    "name": "Reject empty required field tel",
+    "input": {
+      "tel": "",
+      "compras": "a",
+      "comida": "a",
+      "casa": "a",
+      "roupa": "a",
+      "transp": "a",
+      "remedio": "a",
+      "dinheiro": "a"
+    },
+    "expected": {
+      "code": "REQUIRED_FIELD",
+      "field": "tel"
+    },
+    "scope": "Independently constructed schema/domain refusal; code observed from the pinned adapter, no clinical oracle"
+  },
+  {
+    "name": "Reject undocumented option tel",
+    "input": {
+      "tel": "__ELUCENIA_INVALID_OPTION__",
+      "compras": "a",
+      "comida": "a",
+      "casa": "a",
+      "roupa": "a",
+      "transp": "a",
+      "remedio": "a",
+      "dinheiro": "a"
+    },
+    "expected": {
+      "code": "INVALID_OPTION",
+      "field": "tel"
+    },
+    "scope": "Independently constructed schema/domain refusal; code observed from the pinned adapter, no clinical oracle"
+  },
+  {
+    "name": "Reject missing required field compras",
+    "input": {
+      "tel": "a",
+      "comida": "a",
+      "casa": "a",
+      "roupa": "a",
+      "transp": "a",
+      "remedio": "a",
+      "dinheiro": "a"
+    },
+    "expected": {
+      "code": "REQUIRED_FIELD",
+      "field": "compras"
+    },
+    "scope": "Independently constructed schema/domain refusal; code observed from the pinned adapter, no clinical oracle"
+  },
+  {
+    "name": "Reject empty required field compras",
+    "input": {
+      "tel": "a",
+      "compras": "",
+      "comida": "a",
+      "casa": "a",
+      "roupa": "a",
+      "transp": "a",
+      "remedio": "a",
+      "dinheiro": "a"
+    },
+    "expected": {
+      "code": "REQUIRED_FIELD",
+      "field": "compras"
+    },
+    "scope": "Independently constructed schema/domain refusal; code observed from the pinned adapter, no clinical oracle"
+  },
+  {
+    "name": "Reject undocumented option compras",
+    "input": {
+      "tel": "a",
+      "compras": "__ELUCENIA_INVALID_OPTION__",
+      "comida": "a",
+      "casa": "a",
+      "roupa": "a",
+      "transp": "a",
+      "remedio": "a",
+      "dinheiro": "a"
+    },
+    "expected": {
+      "code": "INVALID_OPTION",
+      "field": "compras"
+    },
+    "scope": "Independently constructed schema/domain refusal; code observed from the pinned adapter, no clinical oracle"
+  },
+  {
+    "name": "Reject missing required field comida",
+    "input": {
+      "tel": "a",
+      "compras": "a",
+      "casa": "a",
+      "roupa": "a",
+      "transp": "a",
+      "remedio": "a",
+      "dinheiro": "a"
+    },
+    "expected": {
+      "code": "REQUIRED_FIELD",
+      "field": "comida"
+    },
+    "scope": "Independently constructed schema/domain refusal; code observed from the pinned adapter, no clinical oracle"
+  },
+  {
+    "name": "Reject empty required field comida",
+    "input": {
+      "tel": "a",
+      "compras": "a",
+      "comida": "",
+      "casa": "a",
+      "roupa": "a",
+      "transp": "a",
+      "remedio": "a",
+      "dinheiro": "a"
+    },
+    "expected": {
+      "code": "REQUIRED_FIELD",
+      "field": "comida"
+    },
+    "scope": "Independently constructed schema/domain refusal; code observed from the pinned adapter, no clinical oracle"
+  },
+  {
+    "name": "Reject undocumented option comida",
+    "input": {
+      "tel": "a",
+      "compras": "a",
+      "comida": "__ELUCENIA_INVALID_OPTION__",
+      "casa": "a",
+      "roupa": "a",
+      "transp": "a",
+      "remedio": "a",
+      "dinheiro": "a"
+    },
+    "expected": {
+      "code": "INVALID_OPTION",
+      "field": "comida"
+    },
+    "scope": "Independently constructed schema/domain refusal; code observed from the pinned adapter, no clinical oracle"
+  },
+  {
+    "name": "Reject missing required field casa",
+    "input": {
+      "tel": "a",
+      "compras": "a",
+      "comida": "a",
+      "roupa": "a",
+      "transp": "a",
+      "remedio": "a",
+      "dinheiro": "a"
+    },
+    "expected": {
+      "code": "REQUIRED_FIELD",
+      "field": "casa"
+    },
+    "scope": "Independently constructed schema/domain refusal; code observed from the pinned adapter, no clinical oracle"
+  },
+  {
+    "name": "Reject empty required field casa",
+    "input": {
+      "tel": "a",
+      "compras": "a",
+      "comida": "a",
+      "casa": "",
+      "roupa": "a",
+      "transp": "a",
+      "remedio": "a",
+      "dinheiro": "a"
+    },
+    "expected": {
+      "code": "REQUIRED_FIELD",
+      "field": "casa"
+    },
+    "scope": "Independently constructed schema/domain refusal; code observed from the pinned adapter, no clinical oracle"
+  },
+  {
+    "name": "Reject undocumented option casa",
+    "input": {
+      "tel": "a",
+      "compras": "a",
+      "comida": "a",
+      "casa": "__ELUCENIA_INVALID_OPTION__",
+      "roupa": "a",
+      "transp": "a",
+      "remedio": "a",
+      "dinheiro": "a"
+    },
+    "expected": {
+      "code": "INVALID_OPTION",
+      "field": "casa"
+    },
+    "scope": "Independently constructed schema/domain refusal; code observed from the pinned adapter, no clinical oracle"
+  },
+  {
+    "name": "Reject missing required field roupa",
+    "input": {
+      "tel": "a",
+      "compras": "a",
+      "comida": "a",
+      "casa": "a",
+      "transp": "a",
+      "remedio": "a",
+      "dinheiro": "a"
+    },
+    "expected": {
+      "code": "REQUIRED_FIELD",
+      "field": "roupa"
+    },
+    "scope": "Independently constructed schema/domain refusal; code observed from the pinned adapter, no clinical oracle"
+  },
+  {
+    "name": "Reject empty required field roupa",
+    "input": {
+      "tel": "a",
+      "compras": "a",
+      "comida": "a",
+      "casa": "a",
+      "roupa": "",
+      "transp": "a",
+      "remedio": "a",
+      "dinheiro": "a"
+    },
+    "expected": {
+      "code": "REQUIRED_FIELD",
+      "field": "roupa"
+    },
+    "scope": "Independently constructed schema/domain refusal; code observed from the pinned adapter, no clinical oracle"
+  },
+  {
+    "name": "Reject undocumented option roupa",
+    "input": {
+      "tel": "a",
+      "compras": "a",
+      "comida": "a",
+      "casa": "a",
+      "roupa": "__ELUCENIA_INVALID_OPTION__",
+      "transp": "a",
+      "remedio": "a",
+      "dinheiro": "a"
+    },
+    "expected": {
+      "code": "INVALID_OPTION",
+      "field": "roupa"
+    },
+    "scope": "Independently constructed schema/domain refusal; code observed from the pinned adapter, no clinical oracle"
+  },
+  {
+    "name": "Reject missing required field transp",
+    "input": {
+      "tel": "a",
+      "compras": "a",
+      "comida": "a",
+      "casa": "a",
+      "roupa": "a",
+      "remedio": "a",
+      "dinheiro": "a"
+    },
+    "expected": {
+      "code": "REQUIRED_FIELD",
+      "field": "transp"
+    },
+    "scope": "Independently constructed schema/domain refusal; code observed from the pinned adapter, no clinical oracle"
+  },
+  {
+    "name": "Reject empty required field transp",
+    "input": {
+      "tel": "a",
+      "compras": "a",
+      "comida": "a",
+      "casa": "a",
+      "roupa": "a",
+      "transp": "",
+      "remedio": "a",
+      "dinheiro": "a"
+    },
+    "expected": {
+      "code": "REQUIRED_FIELD",
+      "field": "transp"
+    },
+    "scope": "Independently constructed schema/domain refusal; code observed from the pinned adapter, no clinical oracle"
+  },
+  {
+    "name": "Reject undocumented option transp",
+    "input": {
+      "tel": "a",
+      "compras": "a",
+      "comida": "a",
+      "casa": "a",
+      "roupa": "a",
+      "transp": "__ELUCENIA_INVALID_OPTION__",
+      "remedio": "a",
+      "dinheiro": "a"
+    },
+    "expected": {
+      "code": "INVALID_OPTION",
+      "field": "transp"
+    },
+    "scope": "Independently constructed schema/domain refusal; code observed from the pinned adapter, no clinical oracle"
+  },
+  {
+    "name": "Reject missing required field remedio",
+    "input": {
+      "tel": "a",
+      "compras": "a",
+      "comida": "a",
+      "casa": "a",
+      "roupa": "a",
+      "transp": "a",
+      "dinheiro": "a"
+    },
+    "expected": {
+      "code": "REQUIRED_FIELD",
+      "field": "remedio"
+    },
+    "scope": "Independently constructed schema/domain refusal; code observed from the pinned adapter, no clinical oracle"
+  },
+  {
+    "name": "Reject empty required field remedio",
+    "input": {
+      "tel": "a",
+      "compras": "a",
+      "comida": "a",
+      "casa": "a",
+      "roupa": "a",
+      "transp": "a",
+      "remedio": "",
+      "dinheiro": "a"
+    },
+    "expected": {
+      "code": "REQUIRED_FIELD",
+      "field": "remedio"
+    },
+    "scope": "Independently constructed schema/domain refusal; code observed from the pinned adapter, no clinical oracle"
+  },
+  {
+    "name": "Reject undocumented option remedio",
+    "input": {
+      "tel": "a",
+      "compras": "a",
+      "comida": "a",
+      "casa": "a",
+      "roupa": "a",
+      "transp": "a",
+      "remedio": "__ELUCENIA_INVALID_OPTION__",
+      "dinheiro": "a"
+    },
+    "expected": {
+      "code": "INVALID_OPTION",
+      "field": "remedio"
+    },
+    "scope": "Independently constructed schema/domain refusal; code observed from the pinned adapter, no clinical oracle"
+  },
+  {
+    "name": "Reject missing required field dinheiro",
+    "input": {
+      "tel": "a",
+      "compras": "a",
+      "comida": "a",
+      "casa": "a",
+      "roupa": "a",
+      "transp": "a",
+      "remedio": "a"
+    },
+    "expected": {
+      "code": "REQUIRED_FIELD",
+      "field": "dinheiro"
+    },
+    "scope": "Independently constructed schema/domain refusal; code observed from the pinned adapter, no clinical oracle"
+  },
+  {
+    "name": "Reject empty required field dinheiro",
+    "input": {
+      "tel": "a",
+      "compras": "a",
+      "comida": "a",
+      "casa": "a",
+      "roupa": "a",
+      "transp": "a",
+      "remedio": "a",
+      "dinheiro": ""
+    },
+    "expected": {
+      "code": "REQUIRED_FIELD",
+      "field": "dinheiro"
+    },
+    "scope": "Independently constructed schema/domain refusal; code observed from the pinned adapter, no clinical oracle"
+  },
+  {
+    "name": "Reject undocumented option dinheiro",
+    "input": {
+      "tel": "a",
+      "compras": "a",
+      "comida": "a",
+      "casa": "a",
+      "roupa": "a",
+      "transp": "a",
+      "remedio": "a",
+      "dinheiro": "__ELUCENIA_INVALID_OPTION__"
+    },
+    "expected": {
+      "code": "INVALID_OPTION",
+      "field": "dinheiro"
+    },
+    "scope": "Independently constructed schema/domain refusal; code observed from the pinned adapter, no clinical oracle"
+  }
+]

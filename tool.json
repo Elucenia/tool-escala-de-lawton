@@ -5,6 +5,7 @@
     "short": "Atividades instrumentais de vida diária",
     "desc": "Escala de Lawton-Brody: independência nas 8 atividades instrumentais de vida diária (telefone, compras, refeições, casa, roupa, transporte, remédios, finanças).",
     "lead": "Avalia a capacidade de viver de forma independente na comunidade, pelas atividades instrumentais de vida diária (AIVD).",
+    "kind": "Calculadora",
     "spec": [
       "geriatria",
       "medicina-fisica-e-reabilitacao",
@@ -117,31 +118,14 @@
       ]
     ],
     "formula": "<p>Cada atividade recebe 1 ponto (independente) ou 0 (dependente), conforme o nível descrito:</p><ul><li>Telefone: 1 nos três primeiros níveis.</li><li>Compras e preparo de refeições: 1 só no primeiro nível.</li><li>Tarefas domésticas: 1 em todos os níveis, exceto \"não participa\".</li><li>Lavar roupa: 1 nos dois primeiros níveis.</li><li>Transporte: 1 nos três primeiros níveis.</li><li>Medicações: 1 só no primeiro nível.</li><li>Finanças: 1 nos dois primeiros níveis.</li></ul><p>Total de 0 (dependente) a 8 (independente).</p>",
-    "table": [
-      [
-        "Pontos",
-        "Interpretação"
-      ],
-      [
-        "8",
-        "Independente nas AIVD"
-      ],
-      [
-        "&lt; 8",
-        "Dependência nas atividades com 0 ponto: planejar apoio e investigar a causa"
-      ]
-    ],
-    "table_note": "A escala original não define pontos de corte: acompanhe a pontuação ao longo do tempo no mesmo paciente. No estudo de 1969, preparo de refeições, tarefas domésticas e lavar roupa não foram pontuados nos homens.",
-    "tips": [
-      "As AIVD dependem de cognição e são perdidas antes das atividades básicas: perda de AIVD sem causa física sugere comprometimento cognitivo e merece investigação.",
-      "Considere o papel social e o contexto: quem nunca cozinhou ou cuidou das finanças não deve ser pontuado como dependente sem essa ressalva.",
-      "O item \"medicações\" é o mais sensível para risco na polifarmácia: dependência pede organizador de comprimidos ou supervisão.",
-      "Na adaptação brasileira mais usada (Santos e Virtuoso), cada item vai de 1 a 3 pontos (7 a 21): não compare diretamente com o escore de 0 a 8."
-    ],
     "sources": [
       [
         "Lawton MP, Brody EM. Assessment of older people: self-maintaining and instrumental activities of daily living. Gerontologist, 1969.",
         "https://doi.org/10.1093/geront/9.3_Part_1.179"
+      ],
+      [
+        "HIGN,TryThis23,revised2019",
+        "https://hign.org/sites/default/files/2020-06/Try_This_General_Assessment_23.pdf"
       ]
     ],
     "cases": [
@@ -205,9 +189,6 @@
         }
       ]
     ],
-    "kind": "Calculadora",
-    "config": null,
-    "clinicalReview": "pending",
     "arithmeticTest": {
       "status": "passed",
       "testedAt": "2026-09-25",
@@ -216,17 +197,535 @@
       "failures": []
     },
     "independentArithmeticTest": {
-      "status": "not-tested",
-      "testedAt": null,
-      "total": 0,
-      "passed": 0,
-      "cases": []
+      "status": "passed",
+      "testedAt": "2026-10-04T20:33:44.910Z",
+      "total": 43200,
+      "passed": 43200,
+      "sourceRowCount": 43200,
+      "uniqueApiInputCount": 43200,
+      "sourceContextCount": 43200,
+      "embeddedCasesAreSubset": true,
+      "embeddedCaseCount": 4,
+      "caseStorage": {
+        "mode": "complete-downloadable-bank-with-inline-subset",
+        "file": "independent-source-cases.json",
+        "sha256": "373d5f798a7bc5cadfe2d3b233d6df23597faa3664dc369ffde41a4f2c0e0115",
+        "total": 43200,
+        "bankRowCount": 43200,
+        "uniqueApiInputCount": 43200,
+        "sourceContextCount": 43200,
+        "expectedEvidence": [
+          {
+            "file": "reports/review-20261003/root-six-independent-expectations-final29.json",
+            "sha256": "92f70c18f7b9f7b96089197af3288c3e7695f1c8e219ef036d4f0989bddfb125"
+          },
+          {
+            "file": "reports/review-20261003/root-six-primary-source-review-final29-r2.json",
+            "sha256": "17b72c7bd1a468ac18841cebd1be194208e5e2abe2ff80c948ca4c54475d44a7"
+          }
+        ],
+        "obtainedEvidence": {
+          "file": "reports/review-20261003/root-six-independent-source-check-final29.json",
+          "sha256": "acfea8f09941bc68754ef96e0f3080aa0e240f68cd3ed04f10b51f796a26a043"
+        }
+      },
+      "inputIdentity": "Exact complete immutable API input objects; not execution/runtime counts",
+      "scope": "All43200 originalHIGN2019 itemoption combinations, total0–8 only",
+      "sources": [
+        {
+          "review": {
+            "file": "reports/review-20261003/root-six-primary-source-review-final29-r2.json",
+            "sha256": "17b72c7bd1a468ac18841cebd1be194208e5e2abe2ff80c948ca4c54475d44a7"
+          },
+          "item": {
+            "id": "escala-de-lawton",
+            "edition": "HIGN TryThis23 revised2019 eight domains, both genders; source points from formpage2",
+            "reads": [
+              {
+                "url": "https://hign.org/sites/default/files/2020-06/Try_This_General_Assessment_23.pdf",
+                "read": "Both pages text read; page2 eight activity options and individual0/1 scores visually read. Original1969 not claimed full-read.",
+                "artifact": {
+                  "file": "root-source29-primary-pdfs/lawton-hign-2019.pdf",
+                  "sha256": "d648356b1696cbdb02fcb074a2de78f56a25c577240a05e810a390ca1b026866",
+                  "bytes": 225871
+                }
+              }
+            ],
+            "constants": {
+              "tel": {
+                "a": 1,
+                "b": 1,
+                "c": 1,
+                "d": 0
+              },
+              "compras": {
+                "a": 1,
+                "b": 0,
+                "c": 0,
+                "d": 0
+              },
+              "comida": {
+                "a": 1,
+                "b": 0,
+                "c": 0,
+                "d": 0
+              },
+              "casa": {
+                "a": 1,
+                "b": 1,
+                "c": 1,
+                "d": 1,
+                "e": 0
+              },
+              "roupa": {
+                "a": 1,
+                "b": 1,
+                "c": 0
+              },
+              "transp": {
+                "a": 1,
+                "b": 1,
+                "c": 1,
+                "d": 0,
+                "e": 0
+              },
+              "remedio": {
+                "a": 1,
+                "b": 0,
+                "c": 0
+              },
+              "dinheiro": {
+                "a": 1,
+                "b": 1,
+                "c": 0
+              }
+            },
+            "limitations": [
+              "Only the explicitly tested numeric/Boolean contracts; no clinical, diagnostic, prognostic, source-rights or professional translation approval. Eligibility and rubric equivalence are separate.",
+              "HIGN2019 recommends eight domains for allgenders; originalmale five-domain variant is separate. Institutionalizedpatients excluded in this guidance; reported function does not prove observed performance. Local transportation optionadds rideshare to source taxi; semantic equivalence not approved. HIGN conditional educational reproduction notice does not approve ELUCENIA translated/commercial adaptations; no permission notification or contact sent."
+            ]
+          },
+          "originalSourceReview": {
+            "file": "root-six-primary-source-review-final29.json",
+            "sha256": "5bc754345b3db4ae9521890531cd0e244684bfd168ab88b0b882045fc7b7f036"
+          },
+          "erratum": "Rockall original>100 narrative is retained in the original review; primaryR2 corrects it to≥100 without changing oracle, inputs or code."
+        }
+      ],
+      "evidencePath": "reports/review-20261003/root-six-independent-source-check-final29.json",
+      "evidenceSha256": "acfea8f09941bc68754ef96e0f3080aa0e240f68cd3ed04f10b51f796a26a043",
+      "independentPeer": {
+        "status": "reviewed",
+        "file": "reports/review-20261003/root-six-independent-peer-publication-final29-r2.json",
+        "sha256": "9a364220970a26f43c0d738bb7f1b1dfe96d33f064478c7d6c830c1dc0f72518",
+        "scope": "Independent numeric/source-scope peer only",
+        "factualSourceAmendment": {
+          "file": "reports/review-20261003/root-six-publication-own-source-review-final29-r2.json",
+          "sha256": "c5b320651855564578dbb871a91bd9770c09594497b40ea0560be84d75d8139c"
+        }
+      },
+      "metadataPackagingPeer": {
+        "status": "reviewed",
+        "file": "reports/review-20261003/root-six-bank-packaging-peer-final29-r2.json",
+        "sha256": "e1bfe5287b4cc1defcce6c29ecc9d901cf9b5be19aeb047499da56273b9feb69",
+        "scope": "Independent technical bank/helper packaging and frozen raw-output replay; no clinical, professional-language, source-rights or full-method approval.",
+        "clinicalApproval": "not-performed",
+        "professionalLanguageApproval": "not-performed",
+        "sourceRightsApproval": "not-performed",
+        "fullMethodConformance": "not-performed"
+      },
+      "originalSourceExecutions": 388800,
+      "freshPreparationSampleExecutions": 12,
+      "implementations": [
+        {
+          "file": "apps/website/private/tool-code/escala-de-lawton/calculator.js",
+          "sha256": "7ca6e0cecb4e09c40b2c6895d39a7ee9ee707c704406531de3464c6ef5b0c9a9",
+          "bytes": 6676
+        },
+        {
+          "file": "apps/dashboard/private/tool-code/escala-de-lawton/calculator.js",
+          "sha256": "7ca6e0cecb4e09c40b2c6895d39a7ee9ee707c704406531de3464c6ef5b0c9a9",
+          "bytes": 6676
+        },
+        {
+          "file": "apps/command-center/private/tool-code/escala-de-lawton/calculator.js",
+          "sha256": "7ca6e0cecb4e09c40b2c6895d39a7ee9ee707c704406531de3464c6ef5b0c9a9",
+          "bytes": 6676
+        }
+      ],
+      "qualifications": [
+        "Only the explicitly tested numeric/Boolean contracts; no clinical, diagnostic, prognostic, source-rights or professional translation approval. Eligibility and rubric equivalence are separate.",
+        "HIGN2019 recommends eight domains for allgenders; originalmale five-domain variant is separate. Institutionalizedpatients excluded in this guidance; reported function does not prove observed performance. Local transportation optionadds rideshare to source taxi; semantic equivalence not approved. HIGN conditional educational reproduction notice does not approve ELUCENIA translated/commercial adaptations; no permission notification or contact sent.",
+        "No clinical categories/main/severity/advice/diagnosis/prognostic performance/source-rights or professional-language approval. Full numeric observations are historical frozen Node/VM/Chromium; this preparation adds only bounded fresh Node samples.",
+        "Ottawa primary Boolean result and separately counted supplied true findings are not a validated point-risk score. Rockall pre-score is the source point-code sum; preEndoscopic context is not an exposed clinical classifier.",
+        "Whole catalogues are not staged; only these two evidence leaves per ID and complete banks are owned. Source28/six-neuromotor29 helper branches and counters must be composed separately."
+      ],
+      "clinicalApproval": "not-performed",
+      "professionalLanguageApproval": "not-performed",
+      "sourceRightsApproval": "not-performed",
+      "fullMethodConformance": "not-performed",
+      "publicCandidateBankOmitted": true
+    },
+    "methodVersion": "Lawton Brody 1969:adaptação local 8 domínios 0–1, total 0–8 para ambossexos; não versão sexoespecífica original",
+    "implementationVersion": "escala-de-lawton@native-2026-10-03+7ca6e0cecb4e",
+    "currentMethodSource": "https://pubmed.ncbi.nlm.nih.gov/5349366/",
+    "versionEvidence": {
+      "status": "variant-and-source-edition-recorded",
+      "checkedAt": "2026-10-03",
+      "implementedVariant": "Cada atividade recebe 1 ponto (independente) ou 0 (dependente), conforme o nível descrito: Telefone: 1 nos três primeiros níveis. Compras e preparo de refeições: 1 só no primeiro nível. Tarefas domésticas: 1 em todos os níveis, exceto \"não participa\". Lavar roupa: 1 nos dois primeiros níveis. Transporte: 1 nos três primeiros níveis. Medicações: 1 só no primeiro nível. Finanças: 1 nos dois primeiros níveis. Total de 0 (dependente) a 8 (independente).",
+      "inputContract": {
+        "fields": [
+          {
+            "key": "tel",
+            "label": "Telefone",
+            "type": "sel",
+            "optional": false,
+            "options": {
+              "a": "Usa por iniciativa própria (procura e disca números)",
+              "b": "Disca alguns números conhecidos",
+              "c": "Atende, mas não disca",
+              "d": "Não usa o telefone"
+            }
+          },
+          {
+            "key": "compras",
+            "label": "Compras",
+            "type": "sel",
+            "optional": false,
+            "options": {
+              "a": "Faz todas as compras sozinho",
+              "b": "Faz sozinho só pequenas compras",
+              "c": "Precisa de acompanhante em qualquer compra",
+              "d": "Incapaz de fazer compras"
+            }
+          },
+          {
+            "key": "comida",
+            "label": "Preparo de refeições",
+            "type": "sel",
+            "optional": false,
+            "options": {
+              "a": "Planeja, prepara e serve refeições adequadas sozinho",
+              "b": "Prepara se receber os ingredientes",
+              "c": "Aquece e serve refeições prontas, mas sem dieta adequada",
+              "d": "Precisa que preparem e sirvam as refeições"
+            }
+          },
+          {
+            "key": "casa",
+            "label": "Tarefas domésticas",
+            "type": "sel",
+            "optional": false,
+            "options": {
+              "a": "Cuida da casa sozinho ou com ajuda ocasional em tarefas pesadas",
+              "b": "Faz tarefas leves (lavar louça, arrumar a cama)",
+              "c": "Faz tarefas leves, mas sem manter a limpeza adequada",
+              "d": "Precisa de ajuda em todas as tarefas",
+              "e": "Não participa de nenhuma tarefa doméstica"
+            }
+          },
+          {
+            "key": "roupa",
+            "label": "Lavar roupa",
+            "type": "sel",
+            "optional": false,
+            "options": {
+              "a": "Lava toda a roupa pessoal",
+              "b": "Lava pequenas peças",
+              "c": "Toda a roupa é lavada por outros"
+            }
+          },
+          {
+            "key": "transp",
+            "label": "Transporte",
+            "type": "sel",
+            "optional": false,
+            "options": {
+              "a": "Usa transporte público ou dirige sozinho",
+              "b": "Pega táxi ou aplicativo sozinho, mas não usa transporte público",
+              "c": "Usa transporte público quando acompanhado",
+              "d": "Só anda de táxi ou carro com ajuda de outra pessoa",
+              "e": "Não sai de casa"
+            }
+          },
+          {
+            "key": "remedio",
+            "label": "Medicações",
+            "type": "sel",
+            "optional": false,
+            "options": {
+              "a": "Toma os remédios na dose e hora certas sozinho",
+              "b": "Toma se alguém separar as doses antes",
+              "c": "Incapaz de tomar os remédios sozinho"
+            }
+          },
+          {
+            "key": "dinheiro",
+            "label": "Finanças",
+            "type": "sel",
+            "optional": false,
+            "options": {
+              "a": "Cuida das finanças sozinho",
+              "b": "Faz compras do dia a dia, mas precisa de ajuda com banco e grandes compras",
+              "c": "Incapaz de lidar com dinheiro"
+            }
+          }
+        ],
+        "hash": "274ac83fa1337ed87df40ae94db3b5aab83c6acc112280a06620dcf886d0791f"
+      },
+      "sourceEditions": [
+        {
+          "citation": "Lawton MP, Brody EM. Assessment of older people: self-maintaining and instrumental activities of daily living. Gerontologist, 1969.",
+          "url": "https://doi.org/10.1093/geront/9.3_Part_1.179",
+          "class": "primary-publication-abstract-or-metadata-read",
+          "publicationEditionConfirmed": true,
+          "fullTextRetrieved": false,
+          "formulaConformance": "not-assessed",
+          "publication": {
+            "title": "Assessment of older people: self-maintaining and instrumental activities of daily living.",
+            "year": "1969",
+            "firstPublicationDate": "1969-01-01",
+            "doi": "10.1093/geront/9.3_part_1.179",
+            "pmid": "5349366",
+            "journal": "The Gerontologist",
+            "authors": "Lawton MP, Brody EM."
+          },
+          "primaryPublicationUrl": "https://pubmed.ncbi.nlm.nih.gov/5349366/",
+          "abstractAvailable": false,
+          "fullTextSha256": null,
+          "abstractSha256": null,
+          "matchedBy": "exact-DOI-or-PMID"
+        }
+      ],
+      "publicationEditionConfirmed": true,
+      "fullFormulaConformanceReviewed": false,
+      "formulaConformance": "Not established by bibliographic identity or automatic full-text retrieval; retain independent arithmetic and clinical review as separate evidence.",
+      "independentArithmetic": {
+        "status": "passed",
+        "testedAt": "2026-10-04T20:33:44.910Z",
+        "total": 43200,
+        "passed": 43200,
+        "sourceRowCount": 43200,
+        "uniqueApiInputCount": 43200,
+        "sourceContextCount": 43200,
+        "embeddedCasesAreSubset": true,
+        "embeddedCaseCount": 4,
+        "caseStorage": {
+          "mode": "complete-downloadable-bank-with-inline-subset",
+          "file": "independent-source-cases.json",
+          "sha256": "373d5f798a7bc5cadfe2d3b233d6df23597faa3664dc369ffde41a4f2c0e0115",
+          "total": 43200,
+          "bankRowCount": 43200,
+          "uniqueApiInputCount": 43200,
+          "sourceContextCount": 43200,
+          "expectedEvidence": [
+            {
+              "file": "reports/review-20261003/root-six-independent-expectations-final29.json",
+              "sha256": "92f70c18f7b9f7b96089197af3288c3e7695f1c8e219ef036d4f0989bddfb125"
+            },
+            {
+              "file": "reports/review-20261003/root-six-primary-source-review-final29-r2.json",
+              "sha256": "17b72c7bd1a468ac18841cebd1be194208e5e2abe2ff80c948ca4c54475d44a7"
+            }
+          ],
+          "obtainedEvidence": {
+            "file": "reports/review-20261003/root-six-independent-source-check-final29.json",
+            "sha256": "acfea8f09941bc68754ef96e0f3080aa0e240f68cd3ed04f10b51f796a26a043"
+          }
+        },
+        "inputIdentity": "Exact complete immutable API input objects; not execution/runtime counts",
+        "scope": "All43200 originalHIGN2019 itemoption combinations, total0–8 only",
+        "sources": [
+          {
+            "review": {
+              "file": "reports/review-20261003/root-six-primary-source-review-final29-r2.json",
+              "sha256": "17b72c7bd1a468ac18841cebd1be194208e5e2abe2ff80c948ca4c54475d44a7"
+            },
+            "item": {
+              "id": "escala-de-lawton",
+              "edition": "HIGN TryThis23 revised2019 eight domains, both genders; source points from formpage2",
+              "reads": [
+                {
+                  "url": "https://hign.org/sites/default/files/2020-06/Try_This_General_Assessment_23.pdf",
+                  "read": "Both pages text read; page2 eight activity options and individual0/1 scores visually read. Original1969 not claimed full-read.",
+                  "artifact": {
+                    "file": "root-source29-primary-pdfs/lawton-hign-2019.pdf",
+                    "sha256": "d648356b1696cbdb02fcb074a2de78f56a25c577240a05e810a390ca1b026866",
+                    "bytes": 225871
+                  }
+                }
+              ],
+              "constants": {
+                "tel": {
+                  "a": 1,
+                  "b": 1,
+                  "c": 1,
+                  "d": 0
+                },
+                "compras": {
+                  "a": 1,
+                  "b": 0,
+                  "c": 0,
+                  "d": 0
+                },
+                "comida": {
+                  "a": 1,
+                  "b": 0,
+                  "c": 0,
+                  "d": 0
+                },
+                "casa": {
+                  "a": 1,
+                  "b": 1,
+                  "c": 1,
+                  "d": 1,
+                  "e": 0
+                },
+                "roupa": {
+                  "a": 1,
+                  "b": 1,
+                  "c": 0
+                },
+                "transp": {
+                  "a": 1,
+                  "b": 1,
+                  "c": 1,
+                  "d": 0,
+                  "e": 0
+                },
+                "remedio": {
+                  "a": 1,
+                  "b": 0,
+                  "c": 0
+                },
+                "dinheiro": {
+                  "a": 1,
+                  "b": 1,
+                  "c": 0
+                }
+              },
+              "limitations": [
+                "Only the explicitly tested numeric/Boolean contracts; no clinical, diagnostic, prognostic, source-rights or professional translation approval. Eligibility and rubric equivalence are separate.",
+                "HIGN2019 recommends eight domains for allgenders; originalmale five-domain variant is separate. Institutionalizedpatients excluded in this guidance; reported function does not prove observed performance. Local transportation optionadds rideshare to source taxi; semantic equivalence not approved. HIGN conditional educational reproduction notice does not approve ELUCENIA translated/commercial adaptations; no permission notification or contact sent."
+              ]
+            },
+            "originalSourceReview": {
+              "file": "root-six-primary-source-review-final29.json",
+              "sha256": "5bc754345b3db4ae9521890531cd0e244684bfd168ab88b0b882045fc7b7f036"
+            },
+            "erratum": "Rockall original>100 narrative is retained in the original review; primaryR2 corrects it to≥100 without changing oracle, inputs or code."
+          }
+        ],
+        "evidencePath": "reports/review-20261003/root-six-independent-source-check-final29.json",
+        "evidenceSha256": "acfea8f09941bc68754ef96e0f3080aa0e240f68cd3ed04f10b51f796a26a043",
+        "independentPeer": {
+          "status": "reviewed",
+          "file": "reports/review-20261003/root-six-independent-peer-publication-final29-r2.json",
+          "sha256": "9a364220970a26f43c0d738bb7f1b1dfe96d33f064478c7d6c830c1dc0f72518",
+          "scope": "Independent numeric/source-scope peer only",
+          "factualSourceAmendment": {
+            "file": "reports/review-20261003/root-six-publication-own-source-review-final29-r2.json",
+            "sha256": "c5b320651855564578dbb871a91bd9770c09594497b40ea0560be84d75d8139c"
+          }
+        },
+        "metadataPackagingPeer": {
+          "status": "reviewed",
+          "file": "reports/review-20261003/root-six-bank-packaging-peer-final29-r2.json",
+          "sha256": "e1bfe5287b4cc1defcce6c29ecc9d901cf9b5be19aeb047499da56273b9feb69",
+          "scope": "Independent technical bank/helper packaging and frozen raw-output replay; no clinical, professional-language, source-rights or full-method approval.",
+          "clinicalApproval": "not-performed",
+          "professionalLanguageApproval": "not-performed",
+          "sourceRightsApproval": "not-performed",
+          "fullMethodConformance": "not-performed"
+        },
+        "originalSourceExecutions": 388800,
+        "freshPreparationSampleExecutions": 12,
+        "implementations": [
+          {
+            "file": "apps/website/private/tool-code/escala-de-lawton/calculator.js",
+            "sha256": "7ca6e0cecb4e09c40b2c6895d39a7ee9ee707c704406531de3464c6ef5b0c9a9",
+            "bytes": 6676
+          },
+          {
+            "file": "apps/dashboard/private/tool-code/escala-de-lawton/calculator.js",
+            "sha256": "7ca6e0cecb4e09c40b2c6895d39a7ee9ee707c704406531de3464c6ef5b0c9a9",
+            "bytes": 6676
+          },
+          {
+            "file": "apps/command-center/private/tool-code/escala-de-lawton/calculator.js",
+            "sha256": "7ca6e0cecb4e09c40b2c6895d39a7ee9ee707c704406531de3464c6ef5b0c9a9",
+            "bytes": 6676
+          }
+        ],
+        "qualifications": [
+          "Only the explicitly tested numeric/Boolean contracts; no clinical, diagnostic, prognostic, source-rights or professional translation approval. Eligibility and rubric equivalence are separate.",
+          "HIGN2019 recommends eight domains for allgenders; originalmale five-domain variant is separate. Institutionalizedpatients excluded in this guidance; reported function does not prove observed performance. Local transportation optionadds rideshare to source taxi; semantic equivalence not approved. HIGN conditional educational reproduction notice does not approve ELUCENIA translated/commercial adaptations; no permission notification or contact sent.",
+          "No clinical categories/main/severity/advice/diagnosis/prognostic performance/source-rights or professional-language approval. Full numeric observations are historical frozen Node/VM/Chromium; this preparation adds only bounded fresh Node samples.",
+          "Ottawa primary Boolean result and separately counted supplied true findings are not a validated point-risk score. Rockall pre-score is the source point-code sum; preEndoscopic context is not an exposed clinical classifier.",
+          "Whole catalogues are not staged; only these two evidence leaves per ID and complete banks are owned. Source28/six-neuromotor29 helper branches and counters must be composed separately."
+        ],
+        "clinicalApproval": "not-performed",
+        "professionalLanguageApproval": "not-performed",
+        "sourceRightsApproval": "not-performed",
+        "fullMethodConformance": "not-performed",
+        "publicCandidateBankOmitted": true
+      },
+      "clinicalApproval": "not-performed",
+      "translationApproval": "not-performed",
+      "releaseApproval": "not-performed",
+      "implementationHash": "7ca6e0cecb4e09c40b2c6895d39a7ee9ee707c704406531de3464c6ef5b0c9a9"
+    },
+    "limits": "Esta versão de Lawton avalia oito atividades instrumentais e usa total de 0 a 8 para todos os gêneros, conforme a orientação HIGN de 2019; não aplica a antiga pontuação masculina de cinco itens. A orientação consultada não recomenda o instrumento para idosos institucionalizados. As respostas da pessoa ou de um informante descrevem função percebida e não demonstram execução real de cada tarefa; podem superestimar ou subestimar capacidade e não captar pequenas mudanças. Registre quem respondeu e o contexto da avaliação.",
+    "limitsEvidence": {
+      "status": "direct-primary-developer-guide-both-pages-visually-read",
+      "sources": [
+        {
+          "url": "https://hign.org/sites/default/files/2020-06/Try_This_General_Assessment_23.pdf",
+          "edition": "HIGN,TryThis23,revised2019",
+          "readScope": "Both PDFpages visually read: target populations, eight domains/options, gender update, institutional setting and self/proxy-report limitations; footer permission also read.",
+          "capture": [
+            "primary-verify-limits-final23/lawton-hign-p1.png",
+            "primary-verify-limits-final23/lawton-hign-p2.png"
+          ],
+          "pdfSha256": "d648356b1696cbdb02fcb074a2de78f56a25c577240a05e810a390ca1b026866"
+        },
+        {
+          "url": "https://doi.org/10.1093/geront/9.3_Part_1.179",
+          "edition": "Lawton/Brody1969",
+          "readScope": "Original identity/paywall only; full original not read."
+        }
+      ],
+      "populationScope": "Older-adult instrumental activities; HIGN distinguishes institutionalized populations.",
+      "remainingChecks": [
+        "Original1969 full paper not read.",
+        "No new validation of local wording or professional translations.",
+        "Rights conditions were read but legal approval remains not-performed."
+      ],
+      "clinicalValidation": "not-performed",
+      "professionalLanguageReview": "not-performed",
+      "rightsApproval": "not-performed",
+      "fullMethodConformance": "not-performed"
     }
   },
-  "review": {
-    "status": "needs-review",
-    "reason": "Revisão documental e clínica independente pendente.",
-    "clinicalValidation": "not-performed"
+  "currentSource": {
+    "file": "apps/website/private/tool-code/escala-de-lawton/calculator.js",
+    "bytes": 6676,
+    "sha256": "7ca6e0cecb4e09c40b2c6895d39a7ee9ee707c704406531de3464c6ef5b0c9a9"
   },
-  "clinicalValidation": "not-performed"
+  "sourceToolSha256": "ded67a7df606334763c5619f8b34e986c712beb92146425869ae5870a60d0f28",
+  "omittedFullReferenceBanks": [
+    {
+      "rows": 4,
+      "sha256": "c8c1b8a26af612caf364f0fd9c5f5279b562a1fecff6100460a73f052537ef2b",
+      "reason": "Large independent reference bank not bundled; exact evidence scope and file references retained"
+    },
+    {
+      "rows": 4,
+      "sha256": "c8c1b8a26af612caf364f0fd9c5f5279b562a1fecff6100460a73f052537ef2b",
+      "reason": "Large independent reference bank not bundled; exact evidence scope and file references retained"
+    }
+  ],
+  "clinicalApproval": "not-performed",
+  "professionalLanguageApproval": "not-performed",
+  "sourceRightsApproval": "not-performed"
 }

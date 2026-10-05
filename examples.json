@@ -1,6 +1,19 @@
 [
   {
-    "label": "Independente em todas: 8",
+    "id": "escala-de-lawton",
+    "kind": "native-source-reference",
+    "index": 0,
+    "name": "Independente em todas: 8",
+    "originalInput": {
+      "tel": "a",
+      "compras": "a",
+      "comida": "a",
+      "casa": "a",
+      "roupa": "a",
+      "transp": "a",
+      "remedio": "a",
+      "dinheiro": "a"
+    },
     "input": {
       "tel": "a",
       "compras": "a",
@@ -18,20 +31,40 @@
       "level": "low",
       "main": "8"
     },
-    "originalInput": {
-      "tel": "a",
-      "compras": "a",
-      "comida": "a",
-      "casa": "a",
-      "roupa": "a",
-      "transp": "a",
-      "remedio": "a",
-      "dinheiro": "a"
+    "recordedResult": {
+      "main": [
+        "8",
+        "de 8"
+      ],
+      "label": "Lawton-Brody (AIVD)",
+      "raw": {
+        "score": 8
+      }
     },
-    "expandedZeroOptions": []
+    "provenance": {
+      "bank": {
+        "file": "reports/review-20261003/source-cases-audit.json",
+        "bytes": 885399,
+        "sha256": "1e609b8c90f6b7fef933d748f3ebd59836d4d06fe7b7e07ced569756091408d3"
+      },
+      "scope": "Existing recorded synthetic source expectations and source-audit transport baseline; no new independent oracle"
+    }
   },
   {
-    "label": "Disca números conhecidos, pequenas compras, remédios separados: 5",
+    "id": "escala-de-lawton",
+    "kind": "native-source-reference",
+    "index": 1,
+    "name": "Disca números conhecidos, pequenas compras, remédios separados: 5",
+    "originalInput": {
+      "tel": "b",
+      "compras": "b",
+      "comida": "a",
+      "casa": "c",
+      "roupa": "b",
+      "transp": "c",
+      "remedio": "b",
+      "dinheiro": "c"
+    },
     "input": {
       "tel": "b",
       "compras": "b",
@@ -49,20 +82,40 @@
       "level": "mid",
       "verdict": "3 atividades"
     },
-    "originalInput": {
-      "tel": "b",
-      "compras": "b",
-      "comida": "a",
-      "casa": "c",
-      "roupa": "b",
-      "transp": "c",
-      "remedio": "b",
-      "dinheiro": "c"
+    "recordedResult": {
+      "main": [
+        "5",
+        "de 8"
+      ],
+      "label": "Lawton-Brody (AIVD)",
+      "raw": {
+        "score": 5
+      }
     },
-    "expandedZeroOptions": []
+    "provenance": {
+      "bank": {
+        "file": "reports/review-20261003/source-cases-audit.json",
+        "bytes": 885399,
+        "sha256": "1e609b8c90f6b7fef933d748f3ebd59836d4d06fe7b7e07ced569756091408d3"
+      },
+      "scope": "Existing recorded synthetic source expectations and source-audit transport baseline; no new independent oracle"
+    }
   },
   {
-    "label": "Dependente na maioria: 2",
+    "id": "escala-de-lawton",
+    "kind": "native-source-reference",
+    "index": 2,
+    "name": "Dependente na maioria: 2",
+    "originalInput": {
+      "tel": "b",
+      "compras": "c",
+      "comida": "d",
+      "casa": "e",
+      "roupa": "c",
+      "transp": "d",
+      "remedio": "b",
+      "dinheiro": "b"
+    },
     "input": {
       "tel": "b",
       "compras": "c",
@@ -79,16 +132,23 @@
       },
       "level": "mid"
     },
-    "originalInput": {
-      "tel": "b",
-      "compras": "c",
-      "comida": "d",
-      "casa": "e",
-      "roupa": "c",
-      "transp": "d",
-      "remedio": "b",
-      "dinheiro": "b"
+    "recordedResult": {
+      "main": [
+        "2",
+        "de 8"
+      ],
+      "label": "Lawton-Brody (AIVD)",
+      "raw": {
+        "score": 2
+      }
     },
-    "expandedZeroOptions": []
+    "provenance": {
+      "bank": {
+        "file": "reports/review-20261003/source-cases-audit.json",
+        "bytes": 885399,
+        "sha256": "1e609b8c90f6b7fef933d748f3ebd59836d4d06fe7b7e07ced569756091408d3"
+      },
+      "scope": "Existing recorded synthetic source expectations and source-audit transport baseline; no new independent oracle"
+    }
   }
 ]
