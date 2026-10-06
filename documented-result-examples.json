@@ -1,0 +1,441 @@
+{
+  "id": "escala-de-lawton",
+  "implementationVersion": "escala-de-lawton@native-2026-10-05+4e393123cb4f",
+  "scope": "Rendered current output against the same source method; not an independent numerical/clinical oracle",
+  "locales": {
+    "pt-BR": [
+      {
+        "name": "Independente em todas: 8",
+        "output": {
+          "rows": [],
+          "verdict": {
+            "text": "Independente nas atividades instrumentais",
+            "locale": "pt-BR",
+            "template": "documented-source"
+          },
+          "level": "low"
+        }
+      },
+      {
+        "name": "Disca números conhecidos, pequenas compras, remédios separados: 5",
+        "output": {
+          "rows": [],
+          "verdict": {
+            "text": "Dependência em 3 atividades: compras, medicações, finanças",
+            "locale": "pt-BR",
+            "template": "documented-source"
+          },
+          "level": "mid"
+        }
+      },
+      {
+        "name": "Dependente na maioria: 2",
+        "output": {
+          "rows": [],
+          "verdict": {
+            "text": "Dependência em 6 atividades: compras, preparo de refeições, tarefas domésticas, lavar roupa, transporte, medicações",
+            "locale": "pt-BR",
+            "template": "documented-source"
+          },
+          "level": "mid"
+        }
+      }
+    ],
+    "en": [
+      {
+        "name": "Independente em todas: 8",
+        "output": {
+          "rows": [],
+          "verdict": {
+            "text": "Independent in instrumental activities",
+            "locale": "en",
+            "template": "documented-authored-e6f348c2d3306a2f8821"
+          },
+          "level": "low"
+        }
+      },
+      {
+        "name": "Disca números conhecidos, pequenas compras, remédios separados: 5",
+        "output": {
+          "rows": [],
+          "verdict": {
+            "text": "Dependency in 3 activities: shopping, medications, finances",
+            "locale": "en",
+            "template": "documented-authored-49fd5ad7c8e413388e51",
+            "sourceNumbers": [
+              3
+            ]
+          },
+          "level": "mid"
+        }
+      },
+      {
+        "name": "Dependente na maioria: 2",
+        "output": {
+          "rows": [],
+          "verdict": {
+            "text": "Dependency in 6 activities: shopping, meal preparation, housework, laundry, transportation, medications",
+            "locale": "en",
+            "template": "documented-authored-9bb795e2905238467e8e",
+            "sourceNumbers": [
+              6
+            ]
+          },
+          "level": "mid"
+        }
+      }
+    ],
+    "es": [
+      {
+        "name": "Independente em todas: 8",
+        "output": {
+          "rows": [],
+          "verdict": {
+            "text": "Independiente en las actividades instrumentales",
+            "locale": "es",
+            "template": "documented-authored-e6f348c2d3306a2f8821"
+          },
+          "level": "low"
+        }
+      },
+      {
+        "name": "Disca números conhecidos, pequenas compras, remédios separados: 5",
+        "output": {
+          "rows": [],
+          "verdict": {
+            "text": "Dependencia en 3 actividades: compras, medicamentos, finanzas",
+            "locale": "es",
+            "template": "documented-authored-49fd5ad7c8e413388e51",
+            "sourceNumbers": [
+              3
+            ]
+          },
+          "level": "mid"
+        }
+      },
+      {
+        "name": "Dependente na maioria: 2",
+        "output": {
+          "rows": [],
+          "verdict": {
+            "text": "Dependencia en 6 actividades: compras, preparación de comidas, tareas domésticas, lavar la ropa, transporte, medicamentos",
+            "locale": "es",
+            "template": "documented-authored-9bb795e2905238467e8e",
+            "sourceNumbers": [
+              6
+            ]
+          },
+          "level": "mid"
+        }
+      }
+    ],
+    "fr": [
+      {
+        "name": "Independente em todas: 8",
+        "output": {
+          "rows": [],
+          "verdict": {
+            "text": "Indépendant dans les activités instrumentales",
+            "locale": "fr",
+            "template": "documented-authored-e6f348c2d3306a2f8821"
+          },
+          "level": "low"
+        }
+      },
+      {
+        "name": "Disca números conhecidos, pequenas compras, remédios separados: 5",
+        "output": {
+          "rows": [],
+          "verdict": {
+            "text": "Dépendance dans 3 activités : achats, médicaments, finances",
+            "locale": "fr",
+            "template": "documented-authored-49fd5ad7c8e413388e51",
+            "sourceNumbers": [
+              3
+            ]
+          },
+          "level": "mid"
+        }
+      },
+      {
+        "name": "Dependente na maioria: 2",
+        "output": {
+          "rows": [],
+          "verdict": {
+            "text": "Dépendance dans 6 activités : achats, préparation des repas, tâches ménagères, lessive, transport, médicaments",
+            "locale": "fr",
+            "template": "documented-authored-9bb795e2905238467e8e",
+            "sourceNumbers": [
+              6
+            ]
+          },
+          "level": "mid"
+        }
+      }
+    ],
+    "de": [
+      {
+        "name": "Independente em todas: 8",
+        "output": {
+          "rows": [],
+          "verdict": {
+            "text": "Selbstständig bei instrumentellen Aktivitäten",
+            "locale": "de",
+            "template": "documented-authored-e6f348c2d3306a2f8821"
+          },
+          "level": "low"
+        }
+      },
+      {
+        "name": "Disca números conhecidos, pequenas compras, remédios separados: 5",
+        "output": {
+          "rows": [],
+          "verdict": {
+            "text": "Abhängigkeit bei 3 Aktivitäten: Einkäufe, Medikamente, Finanzen",
+            "locale": "de",
+            "template": "documented-authored-49fd5ad7c8e413388e51",
+            "sourceNumbers": [
+              3
+            ]
+          },
+          "level": "mid"
+        }
+      },
+      {
+        "name": "Dependente na maioria: 2",
+        "output": {
+          "rows": [],
+          "verdict": {
+            "text": "Abhängigkeit bei 6 Aktivitäten: Einkäufe, Zubereitung von Mahlzeiten, Hausarbeit, Wäschewaschen, Transport, Medikamente",
+            "locale": "de",
+            "template": "documented-authored-9bb795e2905238467e8e",
+            "sourceNumbers": [
+              6
+            ]
+          },
+          "level": "mid"
+        }
+      }
+    ],
+    "it": [
+      {
+        "name": "Independente em todas: 8",
+        "output": {
+          "rows": [],
+          "verdict": {
+            "text": "Indipendente nelle attività strumentali",
+            "locale": "it",
+            "template": "documented-authored-e6f348c2d3306a2f8821"
+          },
+          "level": "low"
+        }
+      },
+      {
+        "name": "Disca números conhecidos, pequenas compras, remédios separados: 5",
+        "output": {
+          "rows": [],
+          "verdict": {
+            "text": "Dipendenza in 3 attività: acquisti, farmaci, finanze",
+            "locale": "it",
+            "template": "documented-authored-49fd5ad7c8e413388e51",
+            "sourceNumbers": [
+              3
+            ]
+          },
+          "level": "mid"
+        }
+      },
+      {
+        "name": "Dependente na maioria: 2",
+        "output": {
+          "rows": [],
+          "verdict": {
+            "text": "Dipendenza in 6 attività: acquisti, preparazione dei pasti, faccende domestiche, bucato, trasporto, farmaci",
+            "locale": "it",
+            "template": "documented-authored-9bb795e2905238467e8e",
+            "sourceNumbers": [
+              6
+            ]
+          },
+          "level": "mid"
+        }
+      }
+    ],
+    "ar": [
+      {
+        "name": "Independente em todas: 8",
+        "output": {
+          "rows": [],
+          "verdict": {
+            "text": "مستقل في الأنشطة الأداتية",
+            "locale": "ar",
+            "template": "documented-authored-e6f348c2d3306a2f8821"
+          },
+          "level": "low"
+        }
+      },
+      {
+        "name": "Disca números conhecidos, pequenas compras, remédios separados: 5",
+        "output": {
+          "rows": [],
+          "verdict": {
+            "text": "اعتماد في ٣ أنشطة: التسوق، الأدوية، الشؤون المالية",
+            "locale": "ar",
+            "template": "documented-authored-49fd5ad7c8e413388e51",
+            "sourceNumbers": [
+              3
+            ]
+          },
+          "level": "mid"
+        }
+      },
+      {
+        "name": "Dependente na maioria: 2",
+        "output": {
+          "rows": [],
+          "verdict": {
+            "text": "اعتماد في ٦ أنشطة: التسوق، إعداد الوجبات، الأعمال المنزلية، غسل الملابس، النقل، الأدوية",
+            "locale": "ar",
+            "template": "documented-authored-9bb795e2905238467e8e",
+            "sourceNumbers": [
+              6
+            ]
+          },
+          "level": "mid"
+        }
+      }
+    ],
+    "zh": [
+      {
+        "name": "Independente em todas: 8",
+        "output": {
+          "rows": [],
+          "verdict": {
+            "text": "工具性日常活动独立",
+            "locale": "zh",
+            "template": "documented-authored-e6f348c2d3306a2f8821"
+          },
+          "level": "low"
+        }
+      },
+      {
+        "name": "Disca números conhecidos, pequenas compras, remédios separados: 5",
+        "output": {
+          "rows": [],
+          "verdict": {
+            "text": "3 项活动依赖：购物、用药、财务",
+            "locale": "zh",
+            "template": "documented-authored-49fd5ad7c8e413388e51",
+            "sourceNumbers": [
+              3
+            ]
+          },
+          "level": "mid"
+        }
+      },
+      {
+        "name": "Dependente na maioria: 2",
+        "output": {
+          "rows": [],
+          "verdict": {
+            "text": "6 项活动依赖：购物、备餐、家务、洗衣、交通、用药",
+            "locale": "zh",
+            "template": "documented-authored-9bb795e2905238467e8e",
+            "sourceNumbers": [
+              6
+            ]
+          },
+          "level": "mid"
+        }
+      }
+    ],
+    "ja": [
+      {
+        "name": "Independente em todas: 8",
+        "output": {
+          "rows": [],
+          "verdict": {
+            "text": "手段的日常生活動作は自立している",
+            "locale": "ja",
+            "template": "documented-authored-e6f348c2d3306a2f8821"
+          },
+          "level": "low"
+        }
+      },
+      {
+        "name": "Disca números conhecidos, pequenas compras, remédios separados: 5",
+        "output": {
+          "rows": [],
+          "verdict": {
+            "text": "3項目の活動で依存：買い物、服薬、金銭管理",
+            "locale": "ja",
+            "template": "documented-authored-49fd5ad7c8e413388e51",
+            "sourceNumbers": [
+              3
+            ]
+          },
+          "level": "mid"
+        }
+      },
+      {
+        "name": "Dependente na maioria: 2",
+        "output": {
+          "rows": [],
+          "verdict": {
+            "text": "6項目の活動で依存：買い物、食事の準備、家事、洗濯、移動、服薬",
+            "locale": "ja",
+            "template": "documented-authored-9bb795e2905238467e8e",
+            "sourceNumbers": [
+              6
+            ]
+          },
+          "level": "mid"
+        }
+      }
+    ],
+    "hi": [
+      {
+        "name": "Independente em todas: 8",
+        "output": {
+          "rows": [],
+          "verdict": {
+            "text": "साधनगत गतिविधियों में स्वतंत्र",
+            "locale": "hi",
+            "template": "documented-authored-e6f348c2d3306a2f8821"
+          },
+          "level": "low"
+        }
+      },
+      {
+        "name": "Disca números conhecidos, pequenas compras, remédios separados: 5",
+        "output": {
+          "rows": [],
+          "verdict": {
+            "text": "3 गतिविधियों में निर्भरता: खरीदारी, दवाएँ, वित्त",
+            "locale": "hi",
+            "template": "documented-authored-49fd5ad7c8e413388e51",
+            "sourceNumbers": [
+              3
+            ]
+          },
+          "level": "mid"
+        }
+      },
+      {
+        "name": "Dependente na maioria: 2",
+        "output": {
+          "rows": [],
+          "verdict": {
+            "text": "6 गतिविधियों में निर्भरता: खरीदारी, भोजन तैयारी, घरेलू कार्य, कपड़े धोना, परिवहन, दवाएँ",
+            "locale": "hi",
+            "template": "documented-authored-9bb795e2905238467e8e",
+            "sourceNumbers": [
+              6
+            ]
+          },
+          "level": "mid"
+        }
+      }
+    ]
+  }
+}

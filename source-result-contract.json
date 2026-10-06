@@ -1,0 +1,183 @@
+{
+  "schema": "elucenia-public-source-result-preservation-v1",
+  "id": "escala-de-lawton",
+  "source": {
+    "baselineFile": "reports/review-20261005-completion/public-native-output-baseline-r2/baseline.json",
+    "baselineSha256": "e5f274fa5acc74566e1c3d55afb6bb402ad9928337dd77a2945442f5b6c49439",
+    "previousCommit": "43e97add26c2ce79954d5b2a960fc80f3c12f510",
+    "oldEngineSha256": "7ca6e0cecb4e09c40b2c6895d39a7ee9ee707c704406531de3464c6ef5b0c9a9",
+    "currentEngineSha256": "4e393123cb4f4bd65275c186c8c2ee8fdefc08709103e5dbb916b2f3b9e2dc23"
+  },
+  "scope": "Existing synthetic inputs and same pinned mathematical-function outputs. Clinical interpretation correctness and professional translation are separate unperformed reviews.",
+  "clinicalApproval": "not-performed",
+  "professionalLanguageReview": "not-performed",
+  "cases": [
+    {
+      "caseIndex": 0,
+      "name": "Independente em todas: 8",
+      "input": {
+        "tel": "a",
+        "compras": "a",
+        "comida": "a",
+        "casa": "a",
+        "roupa": "a",
+        "transp": "a",
+        "remedio": "a",
+        "dinheiro": "a"
+      },
+      "publicOutput": {
+        "id": "escala-de-lawton",
+        "main": [
+          "8",
+          "de 8"
+        ],
+        "label": "Lawton-Brody (AIVD)",
+        "raw": {
+          "score": 8
+        },
+        "clinicalValidation": "not-performed"
+      },
+      "sourceExpected": {
+        "raw": {
+          "score": 8
+        },
+        "level": "low",
+        "main": "8"
+      },
+      "inspectedSourceOutput": {
+        "main": [
+          "8",
+          "de 8"
+        ],
+        "label": "Lawton-Brody (AIVD)",
+        "level": "low",
+        "verdict": "Independente nas atividades instrumentais",
+        "raw": {
+          "score": 8
+        }
+      },
+      "numericEquality": true,
+      "inspectionScope": "Same pinned source function, inspected in memory; not an independent formula/clinical oracle.",
+      "state": "source-transport-comparable",
+      "nonemptySourceFields": [
+        "verdict",
+        "level"
+      ],
+      "missingPublicFields": [
+        "verdict",
+        "level"
+      ]
+    },
+    {
+      "caseIndex": 1,
+      "name": "Disca números conhecidos, pequenas compras, remédios separados: 5",
+      "input": {
+        "tel": "b",
+        "compras": "b",
+        "comida": "a",
+        "casa": "c",
+        "roupa": "b",
+        "transp": "c",
+        "remedio": "b",
+        "dinheiro": "c"
+      },
+      "publicOutput": {
+        "id": "escala-de-lawton",
+        "main": [
+          "5",
+          "de 8"
+        ],
+        "label": "Lawton-Brody (AIVD)",
+        "raw": {
+          "score": 5
+        },
+        "clinicalValidation": "not-performed"
+      },
+      "sourceExpected": {
+        "raw": {
+          "score": 5
+        },
+        "level": "mid",
+        "verdict": "3 atividades"
+      },
+      "inspectedSourceOutput": {
+        "main": [
+          "5",
+          "de 8"
+        ],
+        "label": "Lawton-Brody (AIVD)",
+        "level": "mid",
+        "verdict": "Dependência em 3 atividades: compras, medicações, finanças",
+        "raw": {
+          "score": 5
+        }
+      },
+      "numericEquality": true,
+      "inspectionScope": "Same pinned source function, inspected in memory; not an independent formula/clinical oracle.",
+      "state": "source-transport-comparable",
+      "nonemptySourceFields": [
+        "verdict",
+        "level"
+      ],
+      "missingPublicFields": [
+        "verdict",
+        "level"
+      ]
+    },
+    {
+      "caseIndex": 2,
+      "name": "Dependente na maioria: 2",
+      "input": {
+        "tel": "b",
+        "compras": "c",
+        "comida": "d",
+        "casa": "e",
+        "roupa": "c",
+        "transp": "d",
+        "remedio": "b",
+        "dinheiro": "b"
+      },
+      "publicOutput": {
+        "id": "escala-de-lawton",
+        "main": [
+          "2",
+          "de 8"
+        ],
+        "label": "Lawton-Brody (AIVD)",
+        "raw": {
+          "score": 2
+        },
+        "clinicalValidation": "not-performed"
+      },
+      "sourceExpected": {
+        "raw": {
+          "score": 2
+        },
+        "level": "mid"
+      },
+      "inspectedSourceOutput": {
+        "main": [
+          "2",
+          "de 8"
+        ],
+        "label": "Lawton-Brody (AIVD)",
+        "level": "mid",
+        "verdict": "Dependência em 6 atividades: compras, preparo de refeições, tarefas domésticas, lavar roupa, transporte, medicações",
+        "raw": {
+          "score": 2
+        }
+      },
+      "numericEquality": true,
+      "inspectionScope": "Same pinned source function, inspected in memory; not an independent formula/clinical oracle.",
+      "state": "source-transport-comparable",
+      "nonemptySourceFields": [
+        "verdict",
+        "level"
+      ],
+      "missingPublicFields": [
+        "verdict",
+        "level"
+      ]
+    }
+  ]
+}

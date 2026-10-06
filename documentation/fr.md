@@ -140,3 +140,22 @@ Résultat de la formule ou de la classification. L’interprétation, la conduit
 Apache-2.0 s’applique uniquement au code d’ELUCENIA. Les droits sur les instruments, publications, traductions et données restent ceux de leurs titulaires respectifs. Conservez LICENSE et NOTICE.
 
 ELUCENIA · Felipe Guedes · Copyright © 2026
+
+## Résultats documentés
+
+Les informations ci-dessous conservent les sorties de la méthode pour des exemples synthétiques. Elles ne constituent pas une validation clinique indépendante.
+
+### 1
+
+Indépendant dans les activités instrumentales
+
+
+### 2
+
+Dépendance dans 3 activités : achats, médicaments, finances
+
+
+### 3
+
+Dépendance dans 6 activités : achats, préparation des repas, tâches ménagères, lessive, transport, médicaments
+

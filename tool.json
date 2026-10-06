@@ -367,7 +367,7 @@
       "publicCandidateBankOmitted": true
     },
     "methodVersion": "Lawton Brody 1969:adaptação local 8 domínios 0–1, total 0–8 para ambossexos; não versão sexoespecífica original",
-    "implementationVersion": "escala-de-lawton@native-2026-10-03+7ca6e0cecb4e",
+    "implementationVersion": "escala-de-lawton@native-2026-10-05+4e393123cb4f",
     "currentMethodSource": "https://pubmed.ncbi.nlm.nih.gov/5349366/",
     "versionEvidence": {
       "status": "variant-and-source-edition-recorded",
@@ -673,7 +673,35 @@
       "clinicalApproval": "not-performed",
       "translationApproval": "not-performed",
       "releaseApproval": "not-performed",
-      "implementationHash": "7ca6e0cecb4e09c40b2c6895d39a7ee9ee707c704406531de3464c6ef5b0c9a9"
+      "implementationHash": "4e393123cb4f4bd65275c186c8c2ee8fdefc08709103e5dbb916b2f3b9e2dc23",
+      "documentedOutputContract": {
+        "fields": [
+          "level",
+          "verdict",
+          "rows",
+          "note"
+        ],
+        "scope": "Optional documented outputs already produced by the existing scientific method; no new classification or treatment decision.",
+        "sourceExposureReceipt": {
+          "file": "reports/review-20261005-completion/native-result-presentation-r1/applied-output-r1/receipt.json",
+          "sha256": "ad5471530e501b906b966463cef1eb20e9745ac745fc30fb85d3ec4db2a333c3"
+        },
+        "scientificBodiesUnchanged": true,
+        "clinicalApproval": "not-performed",
+        "professionalLanguageApproval": "not-performed"
+      },
+      "technicalBindingHistory": [
+        {
+          "recordedAt": "2026-10-05T23:55:42.176Z",
+          "scope": "Expose existing documented result fields; scientific body and complete input contract unchanged.",
+          "previousImplementationVersion": "escala-de-lawton@native-2026-10-03+7ca6e0cecb4e",
+          "previousImplementationHash": "7ca6e0cecb4e09c40b2c6895d39a7ee9ee707c704406531de3464c6ef5b0c9a9",
+          "implementationHash": "4e393123cb4f4bd65275c186c8c2ee8fdefc08709103e5dbb916b2f3b9e2dc23",
+          "scientificBodySha256": "4e8de3e71a622ee7f29a1da15e8b37d07697e239a833774e35489fb37c1ae803",
+          "metadataContractHash": "274ac83fa1337ed87df40ae94db3b5aab83c6acc112280a06620dcf886d0791f",
+          "exposureReceiptSha256": "ad5471530e501b906b966463cef1eb20e9745ac745fc30fb85d3ec4db2a333c3"
+        }
+      ]
     },
     "limits": "Esta versão de Lawton avalia oito atividades instrumentais e usa total de 0 a 8 para todos os gêneros, conforme a orientação HIGN de 2019; não aplica a antiga pontuação masculina de cinco itens. A orientação consultada não recomenda o instrumento para idosos institucionalizados. As respostas da pessoa ou de um informante descrevem função percebida e não demonstram execução real de cada tarefa; podem superestimar ou subestimar capacidade e não captar pequenas mudanças. Registre quem respondeu e o contexto da avaliação.",
     "limitsEvidence": {
@@ -709,20 +737,20 @@
   },
   "currentSource": {
     "file": "apps/website/private/tool-code/escala-de-lawton/calculator.js",
-    "bytes": 6676,
-    "sha256": "7ca6e0cecb4e09c40b2c6895d39a7ee9ee707c704406531de3464c6ef5b0c9a9"
+    "bytes": 6881,
+    "sha256": "4e393123cb4f4bd65275c186c8c2ee8fdefc08709103e5dbb916b2f3b9e2dc23"
   },
-  "sourceToolSha256": "ded67a7df606334763c5619f8b34e986c712beb92146425869ae5870a60d0f28",
+  "sourceToolSha256": "15039024a1208ebb372396e9186a8f450004ac4c3f8c0c29a22074c2c18ae8ef",
   "omittedFullReferenceBanks": [
     {
       "rows": 4,
       "sha256": "c8c1b8a26af612caf364f0fd9c5f5279b562a1fecff6100460a73f052537ef2b",
-      "reason": "Large independent reference bank not bundled; exact evidence scope and file references retained"
+      "reason": "Large independent reference bank not bundled; historical proof scope retained"
     },
     {
       "rows": 4,
       "sha256": "c8c1b8a26af612caf364f0fd9c5f5279b562a1fecff6100460a73f052537ef2b",
-      "reason": "Large independent reference bank not bundled; exact evidence scope and file references retained"
+      "reason": "Large independent reference bank not bundled; historical proof scope retained"
     }
   ],
   "clinicalApproval": "not-performed",
